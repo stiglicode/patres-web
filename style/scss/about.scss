@@ -1,0 +1,142 @@
+:root {
+    --primary-hue: #F1C284
+}
+
+body, html {
+    margin: 0;
+    font-size: 100%;
+    background-color: #f8f8f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    height: 100vh;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.top-section {
+    display: flex;
+    flex-direction: row;
+    .top-section_left {
+        display: block;
+        width:60vw;
+        height: 100%;
+    }
+    .top-section_right {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        span {
+            color: var(--primary-hue);
+            font-weight: bold;
+        }
+        p {
+            color: #b3b3b3;
+        }
+        .tsr-utility {
+            .tsr-utility_container {
+                margin: 0 2rem;
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto;
+                row-gap: 10px;
+                column-gap: 10px;
+                .tsr-utility_box {
+                    background-color: #ffff;
+                    padding: 2rem;
+                    display: flex;
+                    flex-direction: row;
+                    transition: .2s ease-in;
+                    &:hover {
+                        box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.15);
+                        z-index: 10;
+                    }
+                    img {
+                        height: 100%;
+                        width: 100px;
+                    }
+                    .tsr-utility_text-box {
+                        margin-left: 1em;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        h3 {
+                            margin-top: 0;
+                        }
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.bottom-section {
+    margin-top: 50px;
+    .bottom-section_top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .bst-subtitle {
+            font-weight: bold;
+            color: var(--primary-hue)
+        }
+    }
+    .bottom-section_bottom {
+        display: flex;
+        flex-direction: row;
+        padding: 2rem 5rem;
+        .card {
+            height: 700px;
+            width: 33%;
+            margin: 0 3rem;
+            background-color: #fff;
+            box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.08);
+            transition: .3s ease-in-out;
+            &:hover {
+                transform: scale(1.03);
+            }
+            .card-img {
+                width: 100%;
+                height: 350px;
+            }
+            .card-content {
+                padding: 2rem;
+                .card-content-top {
+                    font-weight: bold;
+                    span {
+                        position: relative;
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            height: 15px;
+                            width: 15px;
+                            margin-right: .5rem;
+                        }
+                    }
+                    span:nth-child(1) {
+                        color: gray;
+                        margin-right: 1rem;
+                        // background-image: url("../assets/img/asdasdasd.png");
+                    }
+                    span:nth-child(2) {
+                        color: var(--primary-hue);
+                        // background-image: url("../assets/img/asdasdasd.png");
+                    }
+                }
+                p {
+                    color: gray;
+                }
+            }
+        }
+    }
+}
