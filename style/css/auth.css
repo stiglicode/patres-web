@@ -1,0 +1,195 @@
+body, html {
+    margin: 0;
+    font-size: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+body {
+    height: 100vh;
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.light_mode { 
+color: darkviolet;
+background-color: darkviolet;
+}
+
+.light_mode .form_wrapper form .form_row {
+    border-bottom: solid 1px darkviolet;
+}
+
+.light_mode .form_wrapper form .form_submit {
+    color: white !important;
+    background: #8739A7;
+    background: -moz-linear-gradient(left, #8739A7 0%, #C6345F 100%);
+    background: -webkit-linear-gradient(left, #8739A7 0%, #C6345F 100%);
+    background: linear-gradient(to right, #8739A7 0%, #C6345F 100%);
+}
+
+.light_mode .form_wrapper {
+    background-color: white;
+}
+
+.dark_mode { 
+    color: white;
+    background-color: white;
+    }
+
+    .dark_mode .form_wrapper form .form_row .form_input::placeholder {
+       color: white;
+    }
+
+    .dark_mode .form_wrapper form .form_row {
+        border: solid 1px white;
+        border-radius: 0.5rem;
+    }
+    
+    .dark_mode .form_wrapper form .form_submit {
+        color: darkviolet !important;
+        background-color: white;
+    }
+    
+    .dark_mode .form_wrapper {
+        background-color: darkviolet;
+    }
+
+h1 {
+    font-weight: 700;
+    margin: 0;
+}
+
+.light_weight {
+    font-weight: 100;
+}
+
+.form_wrapper {
+    display: flex;
+    flex-direction: column;
+    padding:2.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_input {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: grey;
+    padding: 1rem ;
+}
+
+
+.form_input:focus {
+    outline: none;
+}
+
+.form_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:  center;
+    margin-bottom: 0.8rem;
+}
+
+.form_title {
+    margin-bottom: 1rem;
+}
+
+.form_icon {
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    background-image: url(../../assets/img/bunny.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.form_submit {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.8rem;
+    background: none;
+    border: none;
+    margin-top: 2rem;
+    padding: 0.8rem 0;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  
+  .container input:checked ~ .checkmark {
+    background-color: none;
+    border: solid 1px white;
+
+  }
+  
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
